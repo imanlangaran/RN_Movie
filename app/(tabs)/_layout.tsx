@@ -40,12 +40,12 @@ function TabIcon({ focused, icon, title }: any) {
 
 const _Layout = () => {
   return (
-    <>
-    <StatusBar 
-            barStyle="light-content"
-            backgroundColor="transparent"
-            translucent={true}
-          />
+    // <>
+    // <StatusBar 
+    //         barStyle="light-content"
+    //         backgroundColor="transparent"
+    //         translucent={true}
+    //       />
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
@@ -65,7 +65,7 @@ const _Layout = () => {
           overflow: 'hidden'
         }
       }}
-      >
+    >
       <Tabs.Screen
         name="index"
         options={{
@@ -76,10 +76,10 @@ const _Layout = () => {
               focused={focused}
               icon={icons.home}
               title='Home'
-              />
+            />
           )
         }}
-        />
+      />
       <Tabs.Screen
         name="search"
         options={{
@@ -87,13 +87,13 @@ const _Layout = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <TabIcon
-            focused={focused}
-            icon={icons.search}
-            title='Search'
+              focused={focused}
+              icon={icons.search}
+              title='Search'
             />
           )
         }}
-        />
+      />
       <Tabs.Screen
         name="saved"
         options={{
@@ -104,10 +104,10 @@ const _Layout = () => {
               focused={focused}
               icon={icons.save}
               title='Save'
-              />
+            />
           )
         }}
-        />
+      />
       <Tabs.Screen
         name="profile"
         options={{
@@ -115,15 +115,15 @@ const _Layout = () => {
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <TabIcon
-            focused={focused}
+              focused={focused}
               icon={icons.person}
               title='Profile'
-              />
-            )
-          }}
+            />
+          )
+        }}
       />
     </Tabs>
-          </>
+    // </>
   )
 }
 
